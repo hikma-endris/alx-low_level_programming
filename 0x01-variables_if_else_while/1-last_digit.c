@@ -10,7 +10,7 @@
 int main(void)
 {
 	int n, digt;
-	
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	digt = n % 10;
