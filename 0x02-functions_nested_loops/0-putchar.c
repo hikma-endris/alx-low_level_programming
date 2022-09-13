@@ -12,7 +12,7 @@ int main(void)
 	char message[] = "_putchar";
 	int count;
 
-	for ( count = 0; count < MAXSTRING; count++)
+	for (count = 0; count < MAXSTRING; count++)
 	{
 		if (message[count] == '\0')
 		{
