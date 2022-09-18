@@ -21,7 +21,7 @@ void times_table(void)
 			else if (j > 0 && j < 9)
 				printf("%3d,", p);
 			else
-				printf("%3d\n",p);
+				printf("%3d\n", p);
 		}
 	}
 }
