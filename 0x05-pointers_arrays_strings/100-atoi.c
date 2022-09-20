@@ -1,4 +1,3 @@
-
 #include "main.h"
 #include <stdlib.h>
 
@@ -9,8 +8,23 @@
  */
 int _atoi(char *s)
 {
-	int n;
+	int i;
+	unsigned int num;
 
-	n = atoi(s);
-	return (n);
+	i = 1;
+	num = 0;
+
+	do {
+		if (*s == '-')
+			i *= -1;
+
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+
+		else if (num > 0)
+			break;
+
+	} while (*s++);
+
+	return (num * i);
 }
