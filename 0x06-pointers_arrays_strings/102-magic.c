@@ -1,21 +1,19 @@
 #include <stdio.h>
 
 /**
- * print_number - Prints an integer.
- * @n: The integer to be printed.
+ * main - The main function
+ *
+ * Return: 0 for success
  */
-void print_number(int n)
+int main(void)
 {
-	unsigned int num = n;
+	int n;
+	int a[5];
+	int *p;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		num = -num;
-	}
-
-	if ((num / 10) > 0)
-		print_number(num / 10);
-
-	_putchar((num % 10) + '0');
+	a[2] = 1024;
+	p = &n;
+	*(p + 5) = 98;
+	printf("a[2] = %d\n", a[2]);
+	return (0);
 }
