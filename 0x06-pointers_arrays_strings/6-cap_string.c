@@ -9,13 +9,31 @@
  */
 char *cap_string(char *str)
 {
-	int i;
-	int j;
-	char sep[] = " \t\n,;.!?\"(){}";
+int index = 0;
 
-	printf("%lu\n", sizeof(sep));
-	for (i = 0; *(str + i) != '\0'; i++)
-		for (j = 0; sep[j] != '\0'; j++)
-			;
+	while (str[index])
+	{
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
+
+		index++;
+	}
+
 	return (str);
 }
