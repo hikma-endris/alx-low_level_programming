@@ -2,7 +2,7 @@
 
 /**
  * _puts_recursion - to print a string
- * @*s: pointers of a string to be printed
+ * @s: pointers of a string to be printed
  * Return - a given string
  */
 void _puts_recursion(char *s)
